@@ -544,13 +544,12 @@ active_sessions = []
 
 
 def _start_session(uid, thread_limit):
-    single_run = thread_limit == 1
     StarT_SerVer(
         forced_target=uid,
         interactive=False,
         join_threads=True,
-        thread_limit=thread_limit,
-        single_run=single_run,
+        thread_limit=1,
+        single_run=True
     )
 
 
